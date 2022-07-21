@@ -1,0 +1,75 @@
+body{
+    font-family: 'Manrope', sans-serif;
+    width : 70%;
+    border: 1px solid black;
+    margin: auto;
+    color: white;
+    background-color: black;
+}
+
+header{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color : cyan;
+}
+
+h2{
+    margin-left: 38%;
+}
+
+h3{
+    color : cyan;
+}
+
+span{
+    color :#ecbc06;
+}
+
+
+#info-page{
+    border: 1px solid black;
+    width : 70%;
+    /* height : 1200px; */
+    margin: auto;
+}
+
+#image{
+    /* position: absolute; */
+    width : 300px;
+    height : 300px;
+    margin : auto;
+    border : 1px solid black;
+}
+
+#image img{
+    /* text-align: center; */
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#appearance, #power-stats, #appearance, #work,#bio{
+    border: 1px solid lightslategray;
+    border-radius: 4px;
+    margin : 10px;
+    padding : 10px;
+
+}
+
+
+/* #bio{
+    padding : 10px;
+    border: 1px solid lightslategray;
+    
+} */

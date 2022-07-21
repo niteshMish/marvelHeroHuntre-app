@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: black;
+    color: white;
+}
+#heading{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#search{
+    width: 70%;
+}
+
+.trash{
+    margin-right: 0%;
+}
+
+#fav-list{
+    width : 80%;
+    margin: auto;
+}
+
+/* div i {
+    text-align: center;
+} */
+h3{
+    margin-left: 48%;
+}
+.heroCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(212, 209, 209);
+    border-radius: 8px;
+    width: 50%;
+    margin: 10px auto;
+    padding : 10px;
+    height: 150px;
+    background-color: #0a0c0c;
+}
+
+.more-info{
+    margin : 10px 0;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.more-info:hover{
+    color : cyan;
+}
+
+span{
+    color : #00c9ff;
+}
+
+.sideDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .image{
+    height : 150px;
+    width: 250px;
+    border: 2px solid black;
+} */
+
+img{
+    height : 150px;
+    width: 150px;
+    text-align: center; 
+}
+#bground-image{
+    position: absolute;
+    height: 100%;
+    width : 100%;
+    z-index: -1;
+
+}
+
+#bimage img{
+    /* position: relative; */
+    height: 100%;
+    width : 100%;
+    background: rgba(0,0,0,0.5);
+    /* opacity: 0.89; */
+}
