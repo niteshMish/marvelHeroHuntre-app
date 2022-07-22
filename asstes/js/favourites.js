@@ -1,9 +1,9 @@
-// Display list of favorite hereos 
+// show list of favourite hereos 
 function displayFavHeros(){
-    // check if any heros are stored in favorite list in localStorage
+    // check if any heros are stored in favourite list in localStorage
     if(localStorage.getItem('favHeroes') !== null){
         let heroes = JSON.parse(localStorage.getItem('favHeroes'));
-        // for every hero id in our favorite heros list make an api request to get info about a hero and add info to the page
+        
         console.log("heroes",heroes);
         heroes.forEach(hero => {
             let url = `https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=d06be3cefa09399f84d12402ed228a70&hash=3016962b4bb1956e45f354936372bed5&id=${hero}`;
@@ -23,16 +23,10 @@ function displayFavHeros(){
 
 // Create a card of a hero and show it the favorite list
 function displayInfo(hero){
-     
-    // get the display container  div 
-    let display = document.getElementById('fav-list');
-
-    // create heroDiv to store all info about the hero eg: image,name,more-info button
-    let heroDiv = document.createElement('div');
-
-
-    let sideDiv = document.createElement('div');
-    sideDiv.setAttribute('class','sideDiv');
+     let display = document.getElementById('fav-list');
+     let heroDiv = document.createElement('div');
+     let sideDiv = document.createElement('div');
+     sideDiv.setAttribute('class','sideDiv');
 
     // Create the div to add image to it
     let imageDiv = document.createElement('div');
@@ -48,17 +42,18 @@ function displayInfo(hero){
     // Div to add name of hero
     let nameDiv = document.createElement('div');
     nameDiv.setAttribute('class','name');
-    nameDiv.innerHTML = `<span>Name </span>: ${hero.name}`
+    nameDiv.innerHTML = `<span>Name </span>: ${hero.data.results[0].name}`
 
     // add more info button 
     let moreInfo = document.createElement('div');
     moreInfo.setAttribute('class','more-info');
     moreInfo.innerHTML = `More info..`;
     moreInfo.addEventListener('click',()=>{
-        localStorage.setItem('id',hero.id);
+        localStorage.setItem('id',hero.data.results[0].id);
         showHeroInfo(hero);
     })
 
+    
     nameDiv.appendChild(moreInfo);
     
     let remFav = document.createElement('div');
@@ -66,7 +61,7 @@ function displayInfo(hero){
     remFav.setAttribute('class','trash');
     remFav.addEventListener('click',()=>{
 
-        removeFromFav(hero.id,heroDiv);
+        removeFromFav(hero.data.results[0].id,heroDiv);
     });
 
     sideDiv.appendChild(nameDiv);
@@ -83,13 +78,12 @@ function displayInfo(hero){
     display.appendChild(heroDiv);
 }
 
-// when clicked on more info take the user to show info about the selected hero
+// when
 function showHeroInfo(hero){
     console.log('Hero clicked',hero);
     // similar behavior as an HTTP redirect
-    window.location.replace(`./info.html`);
+    window.location.replace(`./hero_details.html`);
 }
-
 // remove a hero from fovorite list
 function removeFromFav(heroId,heroDiv){
     heroDiv.style.display = 'none';

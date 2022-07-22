@@ -30,9 +30,7 @@ a{
     margin: auto;
 }
 
-/* div i {
-    text-align: center;
-} */
+
 h3{
     margin-left: 48%;
 }
@@ -48,6 +46,8 @@ h3{
     height: 150px;
     background-color: #0a0c0c;
 }
+
+
 
 .more-info{
     margin : 10px 0;
@@ -69,22 +69,25 @@ span{
     justify-content: space-between;
 }
 
-/* .image{
-    height : 150px;
-    width: 250px;
-    border: 2px solid black;
-} */
+
 
 img{
     height : 150px;
     width: 150px;
     text-align: center; 
 }
-#bground-image{
+#background-image{
     position: absolute;
     height: 100%;
     width : 100%;
     z-index: -1;
+
+}
+#nav-bar-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2c0307; 
 
 }
 

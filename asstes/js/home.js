@@ -2,40 +2,6 @@ const search = document.getElementById('search-hero');
 const searchInput = document.getElementById('search-input');
 let superherolist = document.getElementById('heros-list');
 console.log("---search" +searchInput);
-// import md5 from 'crypto-js';
-
-
-// Get yours APIs key at https://developer.marvel.com
-
-// let generetedHash = function hashcode (){
-
-// const PUBLIC_KEY = 'bf6fa6601a02b38821f743614f27c307'; // your public key
-// const PRIVATE_KEY = 'bf23005944d8a38a24c1b2daf10e4f4354da7c6a'; // youur private key
-// const ts = Number(new Date());
-// const hash = CryptoJS.MD5(ts + PRIVATE_KEY + PUBLIC_KEY);
-// console.log(hash);
-// }
-// generetedHash();
-// export default function Heroes({ navigation }) {
-//   const [feedHeroes, setFeedHeroes] = useState([]);
-
-//   useEffect(() => {
-//       async function loadHeroesCharacters() {
-//         const ts = Number(new Date());
-//         const hash = md5.create();
-//         hash.update(ts + PRIVATE_KEY + PUBLIC_KEY);
-//       }
-//     });
-// }
-//take input from search bar and send a request to api to find the hero
-// let typingTimer;                
-// let doneTypingInterval = 250;  
-// searchInput.addEventListener('keyup',() =>{
-//     clearTimeout(typingTimer);
-//     if (searchInput.value) {
-//         typingTimer = setTimeout(getHero, doneTypingInterval);
-//     }
-// });
 
 searchInput.addEventListener('input',getHero);
 getHero();
@@ -118,19 +84,8 @@ function displayInfo(data){
            image.setAttribute('src',`${hero.thumbnail.path}`+'.'+`${hero.thumbnail.extension}`);
            imageDiv.appendChild(image);
            infoCard.appendChild(imageDiv);
-
-
-
-           //// hero details page link
-
-        //    let redirectDiv = document.createElement('div');
-        //    redirectDiv.setAttribute('class','link');
-        //    let anchor = document.createElement('a');
-        //    anchor.setAttribute('src',`${hero.urls[0].url}` , 'value' , image);
-        //    imageDiv.appendChild(anchor)
-        //    infoCard.appendChild(redirectDiv);
-            
-            // name div to display name of hero
+          
+           // name div to display name of hero
            let nameDiv = document.createElement('div');
            nameDiv.setAttribute('class','name');
            nameDiv.innerHTML = `Name : ${hero.name}`

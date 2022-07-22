@@ -22,7 +22,12 @@ a{
 a:hover{
     color : cyan;
 }
-
+ #header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2c0307; 
+ }
 h2{
     margin-left: 38%;
 }
@@ -34,7 +39,12 @@ h3{
 span{
     color :#ecbc06;
 }
-
+.info-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:10px ;
+}
 
 #info-page{
     border: 1px solid black;
@@ -68,8 +78,3 @@ span{
 }
 
 
-/* #bio{
-    padding : 10px;
-    border: 1px solid lightslategray;
-    
-} */

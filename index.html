@@ -15,35 +15,28 @@
   <body>
 
     <!-- Background image  -->
-    <div id="background-image">
-    <img src="./asstes/img/bImg.jpg">
+    <div >
+    <img  id="background-image" src="./asstes/img/bImg.jpg">
     </div>
     
    
     <main>
-        <div id="heading">
-            Super Hero Hunter
+        <div id="headind-div-nav">
+          <div id="heading">
+            <h1 id="logo">Super Hunter</h1>
+          </div>
+          <button id="fav-link">
+            <a href="./favourites.html">My Favorites</a>
+          </button>
         </div>
-
-      <!-- Search bar -->
-      <div id="search-hero">
-           
-              
-             <input type="text" id="search-input" name="search-input" placeholder="Search Super Hero....">
-            
-        
-      </div>
-      <div>
-        <div id="fav-link">
-          <a href="./favourites.html">My Favorites</a>
+            <!-- Search bar -->
+          <div id="search-hero">
+            <input type="text" id="search-input" name="search-input" placeholder="Search Super Hero....">
+          </div>
+          
+        <!-- Div to display our search results -->
+        <div id="heros-list">
         </div>
-      </div>
-
-      <!-- Div to display our search results -->
-      <div id="heros-list">
-      </div>
-    
-      
     </main>
 
     <script  src="./asstes/js/home.js"></script>
